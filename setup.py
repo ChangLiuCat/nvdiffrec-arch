@@ -4,8 +4,8 @@ from setuptools import setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 
-c_flags = ['-DNVDR_TORCH']
-nvcc_flags = ['-DNVDR_TORCH']
+c_flags = ['-DNVDR_TORCH', "-DGLOG_USE_GLOG_EXPORT"]
+nvcc_flags = ['-DNVDR_TORCH', "-DGLOG_USE_GLOG_EXPORT"]
 
 ld_flags = []
 
